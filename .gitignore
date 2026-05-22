@@ -1,0 +1,29 @@
+# Frontend / Node
+node_modules/
+dist/
+build/
+.next/
+.vite/
+
+# Backend / Java
+target/
+*.class
+*.jar
+*.war
+
+# Ambiente
+.env
+.env.local
+.env.development
+.env.production
+
+# IDEs
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

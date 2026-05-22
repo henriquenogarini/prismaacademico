@@ -1,0 +1,48 @@
+# ============================================================
+# Git Ignore - Prisma Acadêmico Backend
+# ============================================================
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+.mvn/
+
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# .env files (NÃO versionar credenciais!)
+# NOTA: Para este protótipo acadêmico, .env com valores locais está versionado
+# Em produção real, adicione .env sem comentário
+# .env
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Java
+*.class
+*.jar
+!app.jar
+
+# Spring Boot
+spring-shell.log
+
+# Test coverage
+/coverage/
+jacoco.exec
+

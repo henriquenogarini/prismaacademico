@@ -1,0 +1,66 @@
+export const ENDPOINTS = {
+  auth: {
+    login: '/auth/login',
+    logout: '/auth/logout',
+    me: '/auth/me',
+  },
+  candidates: {
+    list: '/candidates',
+    getById: (id: string) => `/candidates/${id}`,
+    create: '/candidates',
+    updateStatus: (id: string) => `/candidates/${id}/status`,
+    delete: (id: string) => `/candidates/${id}`,
+  },
+  students: {
+    list: '/students',
+    getById: (id: string) => `/students/${id}`,
+    create: '/students',
+    update: (id: string) => `/students/${id}`,
+    delete: (id: string) => `/students/${id}`,
+  },
+  classes: {
+    list: '/classes',
+    getById: (id: string) => `/classes/${id}`,
+    create: '/classes',
+    update: (id: string) => `/classes/${id}`,
+    delete: (id: string) => `/classes/${id}`,
+  },
+  teachers: {
+    list: '/teachers',
+    getById: (id: string) => `/teachers/${id}`,
+    create: '/teachers',
+    update: (id: string) => `/teachers/${id}`,
+    delete: (id: string) => `/teachers/${id}`,
+  },
+  attendance: {
+    list: '/attendance',
+    save: '/attendance',
+    getByClass: (classId: string) => `/attendance/class/${classId}`,
+  },
+  selectionProcesses: {
+    list: '/selection-processes',
+    getById: (id: string) => `/selection-processes/${id}`,
+    create: '/selection-processes',
+    update: (id: string) => `/selection-processes/${id}`,
+    delete: (id: string) => `/selection-processes/${id}`,
+  },
+  materials: {
+    list: '/materials',
+    getById: (id: string) => `/materials/${id}`,
+    create: '/materials',
+    delete: (id: string) => `/materials/${id}`,
+  },
+  announcements: {
+    list: '/announcements',
+    getById: (id: string) => `/announcements/${id}`,
+    create: '/announcements',
+    delete: (id: string) => `/announcements/${id}`,
+  },
+  reports: {
+    overview: '/reports/overview',
+    statusDistribution: '/reports/status-distribution',
+    attendanceByClass: '/reports/attendance-by-class',
+    studentsBySchool: '/reports/students-by-school',
+    enrollmentTrend: '/reports/enrollment-trend',
+  },
+} as const;

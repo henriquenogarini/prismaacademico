@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-prismaLight text-prismaDark-900;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-prismaGray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-prismaGray-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-prismaGray-400;
+  }
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200;
+  }
+
+  .sidebar-link-active {
+    @apply bg-prismaBlue-700 text-white shadow-prisma;
+  }
+
+  .sidebar-link-inactive {
+    @apply text-prismaDark-300 hover:bg-prismaDark-800 hover:text-white;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-prismaGray-200 shadow-prisma p-6;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-200 hover:shadow-prisma-md hover:-translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 bg-prismaBlue-700 text-white rounded-xl text-sm font-medium transition-all duration-200 hover:bg-prismaBlue-800 focus:outline-none focus:ring-2 focus:ring-prismaBlue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 bg-prismaCyan-600 text-white rounded-xl text-sm font-medium transition-all duration-200 hover:bg-prismaCyan-700 focus:outline-none focus:ring-2 focus:ring-prismaCyan-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 border border-prismaGray-300 text-prismaDark-700 bg-white rounded-xl text-sm font-medium transition-all duration-200 hover:bg-prismaGray-50 focus:outline-none focus:ring-2 focus:ring-prismaBlue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2.5 border border-prismaGray-300 rounded-xl text-sm text-prismaDark-800 placeholder:text-prismaGray-400 focus:outline-none focus:ring-2 focus:ring-prismaBlue-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto;
+  }
+}
